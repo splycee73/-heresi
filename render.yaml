@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: heresi-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: VOICE_CHANNEL_ID
+        value: "1569156109342875698"
